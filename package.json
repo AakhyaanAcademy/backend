@@ -1,0 +1,38 @@
+{
+  "name": "aakhyan",
+  "version": "1.0.0",
+  "description": "E Learning Platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Anish Sapkota",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.186.0",
+    "@aws-sdk/lib-storage": "^3.186.0",
+    "@aws-sdk/s3-request-presigner": "^3.209.0",
+    "@aws-sdk/util-endpoints": "^3.192.0",
+    "axios": "^0.27.2",
+    "bcryptjs": "^2.4.3",
+    "busboy": "^1.6.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "csvtojson": "^2.0.10",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "express-validator": "^6.14.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.4",
+    "nodemailer": "^6.7.5",
+    "nodemon": "^2.0.16",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "sharp": "^0.30.7",
+    "stream": "^0.0.2",
+    "uuid": "^8.3.2"
+  }
+}
