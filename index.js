@@ -29,7 +29,7 @@ app.use((req,res,next)=>{
   console.log(req.path)
   next()
 })
-//app.use(cors())
+app.use(cors())
 app.use(cookieParser());
 app.use(express.static('public'));
 
@@ -42,14 +42,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(passport.initialize());
 
-app.get("/",(req,res)=> {
-  res.send("Hello")
-})
-
-app.get("/abcd",(req,res)=>{
-  console.log("test: abcd")
-  res.send("hell test")
-})
 
 const allowlist = [
   "http://localhost:3000",
@@ -76,7 +68,7 @@ const corsOptionsDelegate = (req, callback) => {
   callback(null, corsOptions) 
 }
 
-app.use("/", cors(corsOptionsDelegate),  routes);
+app.use("/",  routes);
 
 app.listen(process.env.PORT, () => {
   console.log(`Application started on port ${process.env.PORT}`);
